@@ -4,7 +4,7 @@
 
 ## Repositories
 
-### [ACS-Registry](https://github.com/Diplomarbeit-PGHFP-2024-2025)
+### [ACS-Registry](https://github.com/Diplomarbeit-PGHFP-2024-2025/acs-registry)
 
 **AutoChargeStation-Registry** is a centralized registry for all station.
 There all station need to register so cars can discover them.
