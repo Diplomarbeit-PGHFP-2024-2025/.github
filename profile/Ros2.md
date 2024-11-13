@@ -1,16 +1,29 @@
 # Ros2
 
-# first start
-
 once the dev container is open follow https://docs.ros.org/en/jazzy/Installation/Ubuntu-Install-Debs.html
 
 before https://docs.ros.org/en/jazzy/Installation/Ubuntu-Install-Debs.html#id5 there might be an issue you need to go
 into /etc/apt/sources.list.d and remove the ros2.list
 
-after completing the Ros2 tutorial you need to install [just](https://crates.io/crates/just) and python-env
+# dev Tools & dependencies
+
+first we will need to install rustUp and some system deps
 
 ```bash
-sudo apt install just python3-full
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+sudo apt-get install clang libclang-dev libc-dev python3-full
+```
+
+with rust install we will install [just](https://crates.io/crates/just) we will compile it from source since ubuntu is once again compliantly outOfDate
+
+```bash
+cargo install just
+```
+
+to use just we will need to add the install dir from cargo into the bash config
+
+```bash
+echo "export PATH=\"$HOME/.cargo/bin:$PATH\"" >> ~/.bashrc
 ```
 
 in case you have already run `just init` make sure the ~/.bashrc is clear of old `source` statements!
